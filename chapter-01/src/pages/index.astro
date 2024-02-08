@@ -1,27 +1,19 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import JobCard from '@/components/Card.astro';
+
 const profilePictureTwo = 'https://i.imgur.com/JPGFE75.jpg';
 ---
 
 <Layout title="Understanding Astro Home">
 	<main class="flex flex-col items-center justify-center gap-y-2 px-10 pt-10">
 		<!-- card -->
-		<div class="flex gap-x-2 rounded-md border bg-stone-800 p-4">
-			<div class="flex-center mr-2">
-				<img
-					class="rounded-full"
-					src={profilePictureTwo}
-					alt="Headshot Two"
-					width="100px"
-					height="100px"
-				/>
-			</div>
-			<div class="flex flex-col justify-center text-white/80">
-				<h1>Frau Katerina</h1>
-				<h3 class="mb-2 text-white/60">VP of Hooli</h3>
-				<p class="font-lemon text-sm">Helping developers do not very much at all</p>
-			</div>
-		</div>
+		<JobCard
+			name="Frau Katerina"
+			jobTitle="VP of Hooli"
+			jobDescription="Helping developers do not very much at all"
+			imgHref={profilePictureTwo}
+		/>
 	</main>
 </Layout>
 
