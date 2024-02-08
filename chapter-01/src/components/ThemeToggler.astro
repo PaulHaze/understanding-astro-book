@@ -30,6 +30,27 @@
 		fill: transparent;
 	}
 	.moon {
+		fill: rgba(0, 0, 0, 0.6);
+	}
+
+	:global(.dark) .sun {
 		fill: rgba(255, 255, 255, 0.6);
 	}
+
+	:global(.dark) .moon {
+		fill: transparent;
+	}
 </style>
+
+<script>
+	const DARK_THEME_CLASS = 'dark';
+
+	const toggle = document.querySelector('button');
+	const rootEl = document.documentElement;
+
+	if (toggle) {
+		toggle.addEventListener('click', () => {
+			rootEl.classList.toggle(DARK_THEME_CLASS);
+		});
+	}
+</script>

@@ -16,8 +16,9 @@
 	}
 	html {
 		font-family: 'Inter', sans-serif;
-		background: #13151a;
-		color: white;
+	}
+	body {
+		@apply bg-stone-100 text-stone-700 dark:bg-stone-900 dark:text-stone-100;
 	}
 	code {
 		font-family:
