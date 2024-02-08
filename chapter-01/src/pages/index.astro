@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+const profilePictureTwo = 'https://i.imgur.com/JPGFE75.jpg';
+---
+
+<Layout title="Understanding Astro Home">
+	<main class="flex flex-col items-center justify-center gap-y-2 px-10 pt-10">
+		<!-- card -->
+		<div class="flex gap-x-2 rounded-md border bg-stone-800 p-4">
+			<div class="flex-center mr-2">
+				<img
+					class="rounded-full"
+					src={profilePictureTwo}
+					alt="Headshot Two"
+					width="100px"
+					height="100px"
+				/>
+			</div>
+			<div class="flex flex-col justify-center text-white/70">
+				<h1>Frau Katerina</h1>
+				<h2 class="text">VP of Hooli</h2>
+				<p class="font-lemon text-sm">Helping developers do not very much at all</p>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.profile__picture {
+		border-radius: 50%;
+	}
+</style>
